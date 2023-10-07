@@ -10,9 +10,9 @@ const config = {
 const mysql = require('mysql')
 const connection = mysql.createConnection(config)
 
-// const sql = `INSERT INTO people(name) values('Danilo')`
-// connection.query(sql)
-// connection.end()
+const sql = `INSERT INTO people(name) values('Danilo')`
+connection.query(sql)
+connection.end()
 
 let table = '<table>';
 connection.query("Select Id, Name from people", function(error, results, fields) {
