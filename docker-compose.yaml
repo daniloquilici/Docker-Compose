@@ -21,6 +21,8 @@ services:
       context: ./node
     container_name: app
     tty: true
+    volumes:
+      - ./node:/usr/src/app
     networks:
       - node-network    
   
